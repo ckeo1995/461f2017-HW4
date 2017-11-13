@@ -1,0 +1,24 @@
+
+body {
+	    text-align: center;
+	     background: white;
+	    color: black;
+	    font-family: arial;
+    }
+
+  table {
+   	  margin: auto;
+	  border-collapse: collapse;
+  }
+
+  table, th, td{
+	  border: 2px solid black;
+  }
+
+  td {
+	  background:lightgrey;
+  }
+  th, td {
+	 width: 200px;
+	 height: 50px;
+ }
