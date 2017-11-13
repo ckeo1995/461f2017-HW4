@@ -1,0 +1,67 @@
+<!--
+		Name: Christopher Keo, christopher_keo@student.uml.edu
+		Computer Science department, UMass Lowell 
+		Comp.4610, GUI programming I
+		File:
+		Created: 10-NOV-2017
+		Last updated by CK: 12-NOV-2107, 10pm
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Car DynaTable </title>
+		<link rel="stylesheet" href="css/hw4.css">
+	</head>
+	<body>
+		<p>Please enter car prices and fuel consumption below</p>
+	
+	<form>
+		MSRP <input type="number" value ="0.00" id="msrp"><br>
+		<br>
+		Fuel <input type="number" step="any" id="gas"><br>
+		<br>
+		Model<input type="text" id="car"><br>
+	</form>
+	<br>
+		<button onclick="function1()">SUBMIT</button><br>
+		<br>
+		<table id ="table">
+		<tr>
+			<th> Model </th>
+			<th> MPG </th>
+			<th> Price </th>	
+		</tr>
+	</table>
+	<script>
+<!-- Below is how I made my dynamic table using methods learned from w3schools HTML elements section-->
+	function function1(){
+		var a = document.getElementById("table");
+		var b = document.createElement("TR");
+
+		var price = document.getElementById("msrp").value; 
+		var gas = document.getElementById("gas").value;
+		var car = document.getElementById("car").value;
+
+		var gas1 = document.createTextNode(gas);
+		var car1 = document.createTextNode(car);
+		var price1 = document.createTextNode('$' + Intl.NumberFormat().format(price));
+
+		var gas2 = document.createElement("TD"); 
+		var car2 = document.createElement("TD");
+		var price2 = document.createElement("TD");
+
+		car2.appendChild(car1);
+		gas2.appendChild(gas1);
+		price2.appendChild(price1);
+
+		b.appendChild(car2);
+		b.appendChild(gas2);
+		b.appendChild(price2);
+		
+		a.appendChild(b);
+	}
+	</script>
+	</body>
+</html>
+
+
